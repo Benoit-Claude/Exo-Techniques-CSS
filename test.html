@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<!--suppress HtmlUnknownTag, HtmlUnknownAttribute -->
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Tests HTML/CSS</title>
+    <style>
+        body {
+            width: 480px;
+            margin: 10px;
+        }
+        .img-test {
+            opacity: 0.5;
+        }
+        .img-test:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tests HTML/CSS</h1>
+    <p>Modifier ce document. Le but est d'obtenir le même résultat que les images en complétant les styles (regardez le code).</p>
+
+    <h2>Colonnes avec "inline-block"</h2>
+    <p>Obtenir : <img class="img-test" src="a-obtenir/test-1.png" alt="résultat à obtenir N°1" width="480" height="215"/></p>
+    <p>Besoin de :<code>
+        1em
+        33.333%
+        border-box
+        box-sizing
+        display
+        inline-block
+        padding
+        top
+        vertical-align
+        width </code></p>
+    <div>
+        <!-- Styles à compléter (sélecteur et une partie des propriétés sont déjà écrits -->
+        <style scoped>
+            .test-1 {
+                background-color: #CCC;
+            }
+            .test-1 > div {
+                background-color: #EEE;
+            }
+            .test-1 > div:not(:last-child) {
+                border-right: 2px solid red;
+            }
+        </style>
+        <!-- Code HTML qui sera mis en forme conformément à l'image fournie -->
+        <div class="test-1">
+            <div>
+                <h3>Col 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div><!-- Pour éviter les espaces entre les éléments. Faire de même au suivant
+            --><div>
+                <h3>Col 2</h3>
+                <p>Aperiam consectetur dolore dolorem doloremque explicabo harum impedit maxime</p>
+             </div>
+            <div>
+                <h3>Col 3</h3>
+                <p>Non officia quis quisquam !</p>
+            </div>
+        </div>
+    </div>
+
+    <h2>Colonnes avec "table-cell"</h2>
+    <p>Obtenir : <img class="img-test" src="a-obtenir/test-2.png" alt="résultat à obtenir N°2" width="480" height="247"/></p>
+    <p>Besoin de :<code>
+        1em
+        1em
+        33.333%
+        border-box
+        border-spacing
+        box-sizing
+        display
+        display
+        padding
+        table
+        table-cell
+        top
+        vertical-align
+        width
+    </code></p>
+    <div>
+        <style scoped>
+            .test-2 {
+                background-color: #CCC;
+                /*margin: 0 -1em;*/ /*à tester*/
+            }
+            .test-2 > div {
+                background-color: #EEE;
+            }
+            .test-2 > div:not(:last-child) {
+                border-right: 2px solid red;
+            }
+        </style>
+        <div class="test-2">
+            <div>
+                <h3>Col 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <div>
+                <h3>Col 2</h3>
+                <p>Aperiam consectetur dolore dolorem doloremque explicabo harum impedit maxime</p>
+            </div>
+            <div>
+                <h3>Col 3</h3>
+                <p>Non officia quis quisquam !</p>
+            </div>
+        </div>
+    </div>
+
+    <h2>Image en "float"</h2>
+    <p>Obtenir : <img class="img-test" src="a-obtenir/test-3.png" alt="résultat à obtenir N°3" width="480" height="126"/></p>
+    <p><a href="https://developer.mozilla.org/fr/docs/CSS/float">Besoin de lire</a></p>
+    <div>
+        <style scoped>
+            .test-3 {
+                background-color: #EEE;
+            }
+            .test-3 > img {
+
+            }
+        </style>
+        <p class="test-3"><img src="images-contenu/toto.png" alt="la tête à toto"/>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto dolores eos eum labore libero minus natus neque, nihil nobis, numquam, odit officia optio praesentium quasi repellat sed similique sint veniam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto delectus ex quidem! Animi asperiores, cum doloremque eveniet exercitationem facilis inventore, nobis obcaecati, omnis provident qui quia quisquam quos sunt tenetur!</p>
+    </div>
+
+    <h2>Fonds multiples</h2>
+    <p>Obtenir : <img class="img-test" src="a-obtenir/test-4.png" alt="résultat à obtenir N°4" width="480" height="176"/></p>
+    <p>Besoin de :<code>
+        0
+        0
+        50px
+        50px
+        background-position
+        background-repeat
+        bottom
+        left
+        padding
+        repeat-x
+        repeat-y
+        right
+        top
+    </code></p>
+    <div>
+        <style scoped>
+            .test-4 {
+                background-color: #EEE;
+                background-image: url(images-inteface/rouge.png), url(images-inteface/bleu.png);
+            }
+        </style>
+        <p class="test-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto dolores eos eum labore libero minus natus neque, nihil nobis, numquam, odit officia optio praesentium quasi repellat sed similique sint veniam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto delectus ex quidem! Animi asperiores, cum doloremque eveniet exercitationem facilis inventore, nobis obcaecati, omnis provident qui quia quisquam quos sunt tenetur!</p>
+    </div>
+
+    <h2>Positionnement "absolute"</h2>
+    <p>Obtenir : <img class="img-test" src="a-obtenir/test-5.png" alt="résultat à obtenir N°5" width="480" height="87"/></p>
+    <p>Besoin de :<code>
+        -2rem
+        0
+        2rem
+        2rem
+        absolute
+        border-box
+        bottom
+        box-sizing
+        height
+        line-height
+        position
+        position
+        relative
+        right
+    </code></p>
+    <div>
+        <style scoped>
+            .test-5 {
+                background-color: #EEE;
+                border-bottom: 2rem solid #CCC;
+            }
+            .test-5 > .lire-la-suite {
+                display: block;
+                border: 1px solid red;
+            }
+        </style>
+        <p class="test-5">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque maiores possimus vitae. Dicta dolor dolorum eius eos, eum facilis fugiat, illo inventore maiores obcaecati optio repellendus saepe soluta sunt voluptates.
+            <a href="#" class="lire-la-suite">Lire la suite</a>
+        </p>
+    </div>
+
+    <h2>Remplacement de texte par une image</h2>
+    <p>Obtenir : <img class="img-test" src="a-obtenir/test-6.png" alt="résultat à obtenir N°6" width="480" height="72"/></p>
+    <p>Besoin de :<code>
+
+        -9999px
+        0
+        0
+        40px
+        50px
+        50px
+        absolute
+        background-image
+        block
+        bottom
+        display
+        height
+        padding-right
+        position
+        position
+        relative
+        right
+        text-indent
+        url(images-inteface/rouge.png)
+        width
+
+    </code></p>
+    <div>
+        <style scoped>
+            .test-6 {
+                background-color: #EEE;
+            }
+            .test-6 > .lire-la-suite {
+
+            }
+        </style>
+        <p class="test-6">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque maiores possimus vitae. Dicta dolor dolorum eius eos, eum facilis fugiat, illo inventore maiores obcaecati optio repellendus saepe soluta sunt voluptates.
+            <a href="#" class="lire-la-suite">Lire la suite</a>
+        </p>
+    </div>
+
+    <h2>Centre texte et "inline"</h2>
+    <p>Obtenir : <img class="img-test" src="a-obtenir/test-7.png" alt="résultat à obtenir N°7" width="480" height="69"/></p>
+    <p><a href="https://developer.mozilla.org/fr/docs/CSS/text-align">Besoin de lire</a></p>
+    <div>
+        <style scoped>
+            .test-7 {
+                background-color: #EEE;
+            }
+            .test-7 > h3 {
+                display: inline-block;
+                border: solid 1px red;
+                padding: 0.25rem;
+            }
+        </style>
+        <div class="test-7">
+            <h3>Titre avec cadre</h3>
+        </div>
+    </div>
+
+    <h2>Centre bloc de taille fixe</h2>
+    <p>Obtenir : <img class="img-test" src="a-obtenir/test-8.png" alt="résultat à obtenir N°8" width="480" height="33"/></p>
+    <p><a href="https://developer.mozilla.org/fr/docs/CSS/margin">Besoin de lire (attention au mot "auto")</a></p>
+    <div>
+        <style scoped>
+            .test-8 {
+                background-color: #EEE;
+            }
+            .test-8 > h3 {
+                border: solid 1px red;
+                padding: 0.25rem;
+                width: 10rem;
+            }
+        </style>
+        <div class="test-8">
+            <h3>Titre avec cadre</h3>
+        </div>
+    </div>
+</body>
+</html>
